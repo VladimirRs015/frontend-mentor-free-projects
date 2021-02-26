@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    font-family:'Poppins', sans-serif;
+    /* ## Colors */
+    /* ### Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    /* ### Accent */
+    --Blue: hsl(248, 32%, 49%);
+    /* ### Neutral */
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    font-size: 16px;
+}
+
+.hero { 
+    height:100vh;
+    padding:5.33rem 1.25rem;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:var(--Red);
+    color:#fff;
+    background-image: url('/images/bg-intro-mobile.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin:0;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+.hero-text{
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.hero-text-info {
+    font-weight: 600;
+    font-size: .98rem;
+}
+.hero-text-title {
+    font-size: 1.8rem;
+}
+.form-container{
+    /* display: flex; */
+}
+.hero-main-button{
+    display: block;
+    /* outline:1px solid red; */
+    text-align:center;
+    background-color: var(--Blue);
+    padding :1.3rem;
+    border-radius: 8px;
+    margin:1.25rem 0;
+    box-shadow: 0 7px 0 0 rgba(0, 0, 0,.2) ;
+}
+.hero-main-button > .bold{
+    font-weight: 700;
+}
+.hero-main-button > span:last-of-type{
+    display: block;
+}
+
+.form{
+    font-size: 14px;
+    padding: 1.5rem;
+    background-color: #fff;
+    color:var(--Grayish-Blue);
+    border-radius: 8px;
+    box-shadow: 0 8px 0 0 rgba(0, 0, 0,.2) ;
+    /* text-align: center; */
+}
+.form-control:not(:last-of-type){
+    /* padding:1 */
+    margin-bottom:1em;
+}
+.input{
+    box-sizing: border-box;;
+    padding:1rem 0 1rem .9rem;
+    font-weight: 700;
+    font-size:1em;
+    border: 1px solid var(--Grayish-Blue);
+    width: 100%;
+    border:1px solid #E4E4E4;
+}
+.form-submit{
+    display: block;
+    /* outline:1px solid red; */
+    width: 100%;
+    padding: 1em 0 1em 0 ;
+    background-color: var(--Green);
+    border:none;
+    border-radius:8px;
+    color:#fff;
+    font-size:1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 -5px 0 0 #31B97E inset ;
+}
+.input:focus{
+    outline:none;
+}
+button{
+    outline:none
+}
+
+.form-footer{
+    text-align: center;
+    font-size: .7rem;
+    padding: 0 1.2rem 0 1.2rem;
+}
+.form-footer span{
+    color:var(--Red);
+    font-weight: 700;
+}
+
+@media screen and (min-width:768px){
+    body{
+        background-image: url(/images/bg-intro-desktop.png);
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size: cover;
+    }
+    .hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1100px;
+        margin:0 auto;
+        box-sizing: border-box;
+        align-items: center;
+        box-sizing: border-box;
+        /* justify-items: center; */
+        /* margin-bo */
+        /* padding-left: 4.80rem;
+        padding-right: 4.80rem; */
+    }
+    .hero-text{
+        text-align: left;
+    }
+    .hero-text-title{
+       font-size: 3.5rem;
+       margin:0;
+       /* justify-self: left; */
+    }
+    .hero-text-info{
+        font-size: 1.3rem;
+    }
+    .hero-main-button{
+        
+    }
+    .hero-main-button span:last-of-type{
+        display: inline;
+    }
+    .form{
+        padding:2rem;
+    }
+    .form-control{
+        margin:1.3rem;
+    }
+    .form-control:last-of-type{
+        margin-bottom: 0;
+    }
+    .input{
+        padding-left:2rem;
+        font-size: 1.1rem;
+    }
+
+}
